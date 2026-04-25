@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Facts Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <main class="app-shell">
+      <section class="chatbot-card">
+        <header class="chatbot-header">
+          <div class="bot-badge">CF</div>
+          <div class="header-copy">
+            <p class="eyebrow">Cat Facts Assistant</p>
+            <h1>Chat with your cat RAG</h1>
+          </div>
+          <span class="status-pill" id="status-pill">Ready</span>
+        </header>
+
+        <section class="prompt-strip" aria-label="Example prompts">
+          <button type="button" class="prompt-chip" data-prompt="Why do cats purr?">
+            Why do cats purr?
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="How fast can cats run?">
+            How fast can cats run?
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="How many sounds can cats make?">
+            How many sounds can cats make?
+          </button>
+        </section>
+
+        <section class="conversation" id="conversation" aria-live="polite">
+          <article class="message assistant">
+            <div class="message-avatar">AI</div>
+            <div class="message-bubble">
+              <p class="message-role">Assistant</p>
+              <p>Ask me anything about cats and I will answer from your RAG system.</p>
+            </div>
+          </article>
+        </section>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="question">Ask a cat question</label>
+          <textarea
+            id="question"
+            name="question"
+            rows="1"
+            placeholder="Type your cat question and press Enter..."
+          ></textarea>
+          <button type="submit" id="submit-button">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
